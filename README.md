@@ -29,3 +29,7 @@ This project is a modern web application built with the following technologies:
 ## License
 
 This project is licensed under the MIT License.
+
+<br /><br />
+
+<p align="center"> Developed by 🍄 Lília Paula </p>
