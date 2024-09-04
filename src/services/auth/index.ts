@@ -1,6 +1,7 @@
 import EmailProvider from "next-auth/providers/nodemailer";
 import NextAuth from "next-auth";
 import { PrismaAdapter } from "@auth/prisma-adapter";
+import { createStripeCustomer } from "../stripe";
 import { prisma } from "../database";
 
 export const {
@@ -21,12 +22,13 @@ export const {
       from: process.env.EMAIL_FROM,
     }),
   ],
-  /*   events: {
+
+  events: {
     createUser: async (message) => {
       await createStripeCustomer({
         name: message.user.name as string,
         email: message.user.email as string,
       });
     },
-  }, */
+  },
 });

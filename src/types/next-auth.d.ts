@@ -1,7 +1,8 @@
-import { User } from '@prisma/client'
+import { User } from "@prisma/client";
 
-declare module 'next-auth' {
+//para sobrepor o tipo de sessão do next-auth
+declare module "next-auth" {
   interface Session {
-    user: User
+    user: User;
   }
 }

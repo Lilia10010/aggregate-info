@@ -1,8 +1,8 @@
-import { auth } from '@/services/auth'
-import { ProfileForm } from './_components/form'
+import { ProfileForm } from "./_components/form";
+import { auth } from "@/services/auth";
 
 export default async function Page() {
-  const session = await auth()
+  const session = await auth();
 
-  return <ProfileForm defaultValues={session?.user} />
+  return session && <ProfileForm defaultValues={session.user} />;
 }
